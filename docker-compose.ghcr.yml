@@ -1,0 +1,5 @@
+services:
+  app:
+    image: ghcr.io/nikholt1/spring-ghcr-starter:latest
+    ports:
+      - "8090:8080"
