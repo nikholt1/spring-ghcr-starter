@@ -16,16 +16,16 @@ jobs:
       contents: read
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Set up JDK
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@46c56d6f92c88cf540acf95a12a4a41197499222 # v?
         with:
           java-version: '25'
           distribution: 'temurin'
 
       - name: Cache maven packages
-        uses: actions/cache@v4
+        uses: actions/cache@b7e8d49f17405cc70c1c120101943203c98d3a4b #v5.0.3
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
